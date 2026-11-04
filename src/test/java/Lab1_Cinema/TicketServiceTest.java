@@ -44,7 +44,7 @@ public class TicketServiceTest {
                 IllegalArgumentException.class,
                 () -> service.buyTicket(1, 10));
 
-        assertEquals("Билетов нет", exception.getMessage());
+        assertEquals("Места няма", exception.getMessage());
     }
 
     @Test
