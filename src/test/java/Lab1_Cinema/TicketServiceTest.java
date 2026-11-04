@@ -46,4 +46,14 @@ public class TicketServiceTest {
 
         assertEquals("Билетов нет", exception.getMessage());
     }
+
+    @Test
+    void shouldSuccessfullyBuyTicketOnAnotherSeat() {
+        // Покупаем билет на сессию 2, место 5
+        service.buyTicket(2, 5);
+
+        // Проверяем, что место теперь действительно занято
+        assertTrue(repository.isSeatTaken(2, 5));
+    }
+
 }
