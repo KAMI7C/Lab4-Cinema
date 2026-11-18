@@ -7,14 +7,14 @@ pipeline {
                 bat 'mvn compile'
             }
         }
+        stage('Static Analysis') {
+            steps {
+                bat 'mvn checkstyle:check'
+            }
+        }
         stage('Test') {
             steps {
                 bat 'mvn test'
-            }
-        }
-        stage('Verify') {
-            steps {
-                bat 'mvn verify'
             }
         }
         stage('Package') {
