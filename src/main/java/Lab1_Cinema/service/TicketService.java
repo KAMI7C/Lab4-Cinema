@@ -7,7 +7,7 @@ import org.slf4j.LoggerFactory;
 
 public class TicketService {
 
-    // Добавили логгер для этого класса
+    //логгер для этого класса
     private static final Logger log = LoggerFactory.getLogger(TicketService.class);
 
     private final TicketRepository repository;
@@ -27,7 +27,7 @@ public class TicketService {
         }
 
         if (repository.isSeatTaken(sessionId, seat)) {
-            // WARN: попытка занять уже занятое место (предупреждение)
+            // WARN: попытка занять уже занятое место
             log.warn("Попытка купить уже занятое место: сеанс={}, место={}", sessionId, seat);
             throw new IllegalArgumentException("Место уже занято");
         }

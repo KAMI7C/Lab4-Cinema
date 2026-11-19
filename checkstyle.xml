@@ -5,39 +5,38 @@
 <module name="Checker">
     <property name="charset" value="UTF-8"/>
 
-    <!-- 1. Длина строки не больше 120 символов -->
     <module name="LineLength">
         <property name="max" value="120"/>
         <property name="ignorePattern" value="^package.*|^import.*|a href|href|http://|https://|ftp://"/>
     </module>
 
-    <!-- 2. Файл заканчивается переводом строки -->
+
     <module name="NewlineAtEndOfFile"/>
 
     <module name="TreeWalker">
-        <!-- 3. Имена классов с большой буквы -->
+
         <module name="TypeName"/>
 
-        <!-- 4. Имена методов с маленькой буквы -->
+
         <module name="MethodName">
             <property name="format" value="^[a-z][a-zA-Z0-9]*$"/>
         </module>
 
-        <!-- 5. Имена локальных переменных с маленькой буквы -->
+
         <module name="LocalVariableName">
             <property name="format" value="^[a-z][a-zA-Z0-9]*$"/>
         </module>
 
-        <!-- 6. Обязательные фигурные скобки в if/for/while -->
+
         <module name="NeedBraces"/>
 
-        <!-- 7. Запрет пустых catch-блоков -->
+
         <module name="EmptyCatchBlock"/>
 
-        <!-- 8. Неиспользуемые импорты -->
+
         <module name="UnusedImports"/>
 
-        <!-- 9. Пробел после запятой и точки с запятой -->
+
         <module name="WhitespaceAfter">
             <property name="tokens" value="COMMA, SEMI"/>
         </module>
