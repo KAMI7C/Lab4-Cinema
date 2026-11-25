@@ -32,6 +32,16 @@
             <version>${slf4j.version}</version>
         </dependency>
 
+        <dependency>
+            <groupId>io.micrometer</groupId>
+            <artifactId>micrometer-core</artifactId>
+            <version>1.12.5</version>
+        </dependency>
+        <dependency>
+            <groupId>io.micrometer</groupId>
+            <artifactId>micrometer-registry-prometheus</artifactId>
+            <version>1.12.5</version>
+        </dependency>
         <!-- Logback (реализация SLF4J) -->
         <dependency>
             <groupId>ch.qos.logback</groupId>
