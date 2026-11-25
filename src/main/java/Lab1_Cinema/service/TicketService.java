@@ -4,7 +4,6 @@ import Lab1_Cinema.model.Ticket;
 import Lab1_Cinema.repository.TicketRepository;
 import io.micrometer.core.instrument.Counter;
 import io.micrometer.core.instrument.MeterRegistry;
-import io.micrometer.core.instrument.simple.SimpleMeterRegistry;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
