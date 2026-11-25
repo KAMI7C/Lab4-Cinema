@@ -11,7 +11,7 @@ public class MetricsServer {
     public static void start(PrometheusMeterRegistry registry) throws IOException {
         // Создаем сервер, привязываясь ко всем сетевым интерфейсам (0.0.0.0)
         // Это позволит Docker-контейнеру достучаться до приложения
-        HttpServer server = HttpServer.create(new InetSocketAddress("0.0.0.0", 8080), 0);
+        HttpServer server = HttpServer.create(new InetSocketAddress("0.0.0.0", 8081), 0);
 
         server.createContext("/metrics", exchange -> {
             String response = registry.scrape();
